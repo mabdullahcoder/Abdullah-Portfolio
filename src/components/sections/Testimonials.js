@@ -98,7 +98,7 @@ export default function Testimonials() {
           ref={trackRef}
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
-          className="mt-14 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="mt-11 flex snap-x snap-mandatory gap-5 overflow-x-auto overflow-y-hidden pb-4 pt-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {testimonials.map((person, i) => (
             <Reveal

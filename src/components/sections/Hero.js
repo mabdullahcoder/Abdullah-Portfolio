@@ -25,7 +25,7 @@ export default function Hero() {
       />
       <div className="pointer-events-none absolute -top-40 right-0 h-[520px] w-[520px] rounded-full bg-red-700/30 blur-[140px]" />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-5 pb-40 pt-16 sm:px-8 sm:pt-24 sm:pb-20 lg:grid-cols-2 lg:gap-0 lg:pb-24">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-5 pb-0 pt-16 sm:px-8 sm:pt-24 lg:grid-cols-2 lg:gap-0 lg:pb-24">
         <div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -84,16 +84,16 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-sm lg:hidden"
+          className="relative -mx-5 sm:-mx-8 lg:hidden"
         >
-          <div className="relative aspect-[4/5]">
+          <div className="relative ml-auto aspect-[1159/1358] w-full max-w-md">
             <Image
               src="/portrait.png"
               alt="Portrait of Abdullah"
               fill
               priority
-              sizes="384px"
-              className="object-contain object-bottom drop-shadow-[0_30px_60px_rgba(220,38,38,0.35)]"
+              sizes="(max-width: 448px) 100vw, 448px"
+              className="object-cover object-bottom drop-shadow-[0_30px_60px_rgba(220,38,38,0.35)]"
             />
           </div>
         </motion.div>
