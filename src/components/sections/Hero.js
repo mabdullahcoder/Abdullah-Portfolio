@@ -25,13 +25,13 @@ export default function Hero() {
       />
       <div className="pointer-events-none absolute -top-40 right-0 h-[520px] w-[520px] rounded-full bg-red-700/30 blur-[140px]" />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 pb-16 pt-16 sm:px-8 sm:pt-24 lg:grid-cols-2 lg:gap-0 lg:pb-24">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-5 pb-40 pt-16 sm:px-8 sm:pt-24 sm:pb-20 lg:grid-cols-2 lg:gap-0 lg:pb-24">
         <div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="max-w-[12ch] text-4xl font-semibold leading-[0.95] tracking-[-0.05em] text-white sm:max-w-none sm:text-5xl lg:text-6xl"
           >
             Engineering{" "}
             <span className="bg-gradient-to-r from-red-500 to-red-300 bg-clip-text text-transparent">
@@ -47,7 +47,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 max-w-lg text-base text-zinc-400 sm:text-lg"
+            className="mt-6 max-w-[18rem] text-base text-zinc-400 sm:max-w-lg sm:text-lg"
           >
             Full-Stack Software Engineer specializing in performant React
             applications, robust Node.js backend systems, and cloud
@@ -58,11 +58,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-9 flex flex-wrap items-center gap-4"
+            className="mt-7 flex flex-col gap-3.5 sm:mt-9 sm:flex-row sm:flex-wrap"
           >
             <Link
               href="/#contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-transform hover:scale-105"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition-transform hover:scale-[1.01] sm:w-auto"
             >
               Let&apos;s Talk
               <ArrowRight
@@ -72,7 +72,7 @@ export default function Hero() {
             </Link>
             <a
               href="#"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10 sm:w-auto"
             >
               Download Resume
               <Download size={16} />

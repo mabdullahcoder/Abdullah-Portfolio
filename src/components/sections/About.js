@@ -125,10 +125,10 @@ export default function About() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Link
                   href="/#contact"
-                  className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-transform hover:scale-105"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-transform hover:scale-[1.01] sm:w-auto"
                 >
                   Let&apos;s work together
                   <ArrowRight
@@ -138,7 +138,7 @@ export default function About() {
                 </Link>
                 <Link
                   href="/#projects"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10 sm:w-auto"
                 >
                   View my work
                 </Link>
