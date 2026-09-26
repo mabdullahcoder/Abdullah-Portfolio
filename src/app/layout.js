@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Abdullah — Full-Stack Software Engineer",
+  title: "Abdullah | Full-Stack Software Engineer",
   description:
     "Abdullah is a Full-Stack Software Engineer specializing in performant React applications, robust Node.js backend systems, and cloud optimization.",
 };

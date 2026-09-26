@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -15,6 +15,19 @@ const socials = [
 ];
 
 export default function Footer() {
+  const [showRed, setShowRed] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowRed(true);
+      setTimeout(() => {
+        setShowRed(false);
+      }, 2000); // Red for 2 seconds
+    }, 8000); // Total cycle: 2s red + 6s hidden = 8s
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <footer className="overflow-hidden border-t border-white/10 bg-black">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
@@ -98,7 +111,11 @@ export default function Footer() {
         className="select-none px-5 pb-4 text-center leading-none"
       >
         <span
-          className="inline-block cursor-default whitespace-nowrap font-black uppercase tracking-tight text-transparent [-webkit-text-stroke:1.5px_rgba(255,255,255,0.12)] transition-[-webkit-text-stroke-color,filter] duration-500 hover:[-webkit-text-stroke-color:#ef4444] hover:[filter:drop-shadow(0_0_24px_rgba(239,68,68,0.35))]"
+          className={`inline-block cursor-default whitespace-nowrap font-black uppercase tracking-tight text-transparent transition-all duration-500 ${
+            showRed
+              ? "[-webkit-text-stroke:1.5px_#ef4444]"
+              : "[-webkit-text-stroke:1.5px_rgba(255,255,255,0.12)]"
+          }`}
           style={{
             fontFamily: "var(--font-poppins)",
             fontSize: "clamp(3rem, 15vw, 11rem)",

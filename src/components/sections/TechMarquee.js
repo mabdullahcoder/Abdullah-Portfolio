@@ -10,6 +10,9 @@ import {
   SiPostgresql,
   SiDocker,
   SiApachekafka,
+  SiHubspot,
+  SiZapier,
+  SiN8N,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { techStack } from "@/data";
@@ -24,6 +27,13 @@ const icons = {
   postgresql: SiPostgresql,
   docker: SiDocker,
   kafka: SiApachekafka,
+  gohighlevel: SiGraphql, // Using GraphQL icon as placeholder
+  hubspot: SiHubspot,
+  zapier: SiZapier,
+  pipedrive: SiDocker, // Using Docker icon as placeholder
+  elevenlabs: SiNodedotjs, // Using Node icon as placeholder
+  vapi: SiGraphql, // Using GraphQL icon as placeholder
+  n8n: SiN8N,
 };
 
 export default function TechMarquee() {
@@ -42,12 +52,13 @@ export default function TechMarquee() {
         >
           {loop.map((tech, i) => {
             const Icon = icons[tech.icon];
+            const hideIcon = ["gohighlevel", "vapi", "elevenlabs", "pipedrive"].includes(tech.icon);
             return (
               <span
                 key={`${tech.name}-${i}`}
                 className="flex items-center gap-3 whitespace-nowrap text-xl font-semibold uppercase tracking-widest text-zinc-600 transition-colors hover:text-red-500"
               >
-                <Icon size={22} />
+                {!hideIcon && <Icon size={22} />}
                 {tech.name}
               </span>
             );

@@ -8,4 +8,11 @@ export const techStack = [
   { name: "PostgreSQL", icon: "postgresql" },
   { name: "Docker", icon: "docker" },
   { name: "Kafka", icon: "kafka" },
+  { name: "GoHighLevel", icon: "gohighlevel" },
+  { name: "HubSpot", icon: "hubspot" },
+  { name: "Zapier", icon: "zapier" },
+  { name: "Pipedrive", icon: "pipedrive" },
+  { name: "ElevenLabs", icon: "elevenlabs" },
+  { name: "Vapi", icon: "vapi" },
+  { name: "n8n", icon: "n8n" },
 ];
