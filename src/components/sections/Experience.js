@@ -29,7 +29,7 @@ export default function Experience() {
               }}
             >
               <Image
-                src="https://picsum.photos/seed/abdullah-exp/700/900"
+                src="/about-image.jpeg"
                 alt="Portrait of Abdullah at work"
                 fill
                 sizes="(min-width: 1024px) 40vw, 90vw"

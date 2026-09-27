@@ -46,7 +46,7 @@ export default function About() {
                 }}
               >
                 <Image
-                  src="https://picsum.photos/seed/abdullah-about/700/900"
+                  src="/professsional-image.jpeg"
                   alt="Portrait of Abdullah"
                   fill
                   sizes="(min-width: 1024px) 40vw, 90vw"
