@@ -50,7 +50,7 @@ export default function About() {
                   alt="Portrait of Abdullah"
                   fill
                   sizes="(min-width: 1024px) 40vw, 90vw"
-                  className="object-cover grayscale contrast-125"
+                  className="object-cover object-top grayscale"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
               </div>
