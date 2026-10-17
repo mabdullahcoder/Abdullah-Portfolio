@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen overflow-hidden border-b border-white/10 bg-black"
+      className="relative overflow-hidden border-b border-white/10 bg-black"
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-40"
@@ -25,7 +25,7 @@ export default function Hero() {
       />
       <div className="pointer-events-none absolute -top-40 right-0 h-[520px] w-[520px] rounded-full bg-red-700/30 blur-[140px]" />
 
-      <div className="relative mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-6 px-5 pb-8 pt-20 sm:px-8 lg:grid-cols-2 lg:gap-0 lg:pb-16">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-5 pb-8 pt-20 sm:px-8 lg:grid-cols-2 lg:gap-0 lg:pb-16">
         <div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
