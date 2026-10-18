@@ -25,7 +25,7 @@ export default function Hero() {
       />
       <div className="pointer-events-none absolute -top-40 right-0 h-[520px] w-[520px] rounded-full bg-red-700/30 blur-[140px]" />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-5 pb-8 pt-20 sm:px-8 lg:grid-cols-2 lg:gap-0 lg:pb-16">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-5 pb-0 pt-20 sm:px-8 lg:grid-cols-2 lg:gap-0 lg:pb-16">
         <div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -84,7 +84,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="relative -mx-5 sm:-mx-8 lg:hidden"
+          className="relative -mx-5 -mb-8 sm:-mx-8 lg:mb-0 lg:hidden"
         >
           <div className="relative ml-auto aspect-[1159/1358] w-full max-w-md">
             <Image
