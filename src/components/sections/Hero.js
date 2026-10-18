@@ -25,7 +25,7 @@ export default function Hero() {
       />
       <div className="pointer-events-none absolute -top-40 right-0 h-[520px] w-[520px] rounded-full bg-red-700/30 blur-[140px]" />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-5 pb-0 pt-16 sm:px-8 sm:pt-24 lg:grid-cols-2 lg:gap-0 lg:pb-24">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-5 pb-8 pt-20 sm:px-8 lg:grid-cols-2 lg:gap-0 lg:pb-16">
         <div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
