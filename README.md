@@ -1,37 +1,69 @@
-# Abdullah — Portfolio
+# Abdullah Portfolio
 
-A dark, red-accented personal portfolio for a Full-Stack Software Engineer. It presents the developer's story, skills, featured projects, experience and testimonials, with a dedicated case-study page for each project.
+A modern, dark-themed portfolio with red accents for a Full-Stack Software Engineer. Built with Next.js 16, React 19, and Tailwind CSS 4.
 
-## Tech stack
+## Overview
 
-| Area       | Choice                                                                 |
-| ---------- | ---------------------------------------------------------------------- |
-| Framework  | [Next.js 16](https://nextjs.org) (App Router, Turbopack)               |
-| UI         | React 19, [Tailwind CSS 4](https://tailwindcss.com)                    |
-| Animation  | [Framer Motion](https://www.framer.com/motion/)                        |
-| Icons      | [lucide-react](https://lucide.dev), [react-icons](https://react-icons.github.io/react-icons/) |
-| Fonts      | Poppins (body), Plus Jakarta Sans (headings), Geist Mono — via `next/font` |
-| Linting    | ESLint 9 with `eslint-config-next`                                     |
+This portfolio showcases professional experience, skills, and projects with smooth animations and a fully responsive design. It includes:
 
-> This project uses a recent Next.js release with breaking changes. Before changing framework-level code, read the guides in `node_modules/next/dist/docs/` (see [AGENTS.md](AGENTS.md)).
+- Smooth animations with Framer Motion
+- Fully responsive design
+- Interactive skills visualization
+- Detailed project case studies
+- Section-based navigation with scroll progress
+- Optimized dark theme
 
-## Getting started
+## Tech Stack
 
-Requires Node.js 20 or newer.
+| Category      | Technology                                      |
+| ------------- | ----------------------------------------------- |
+| Framework     | Next.js 16 (App Router, Turbopack)              |
+| UI Library    | React 19                                        |
+| Styling       | Tailwind CSS 4                                  |
+| Animation     | Framer Motion                                   |
+| Icons         | lucide-react, react-icons                       |
+| Typography    | Poppins, Plus Jakarta Sans, Geist Mono          |
+| Code Quality  | ESLint 9                                        |
 
-```bash
-npm install
-npm run dev        # http://localhost:3000
-```
+**Important:** This project uses Next.js 16 with breaking changes. Before modifying framework code, consult `node_modules/next/dist/docs/` (see [AGENTS.md](AGENTS.md)).
 
-| Script          | Description                       |
-| --------------- | --------------------------------- |
-| `npm run dev`   | Start the development server      |
-| `npm run build` | Create a production build         |
-| `npm start`     | Serve the production build        |
-| `npm run lint`  | Run ESLint                        |
+## Getting Started
 
-## Project structure
+### Prerequisites
+
+- Node.js 20 or newer
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/abdullah-portfolio.git
+   cd abdullah-portfolio
+   ```
+
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+
+3. Start development server
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser at [http://localhost:3000](http://localhost:3000)
+
+### Available Scripts
+
+| Command           | Description                           |
+| ----------------- | ------------------------------------- |
+| `npm run dev`     | Start development server              |
+| `npm run build`   | Create optimized production build     |
+| `npm start`       | Serve production build locally        |
+| `npm run lint`    | Run ESLint to check code quality      |
+
+## Project Structure
 
 ```
 src/
@@ -40,15 +72,15 @@ src/
 │   ├── page.js                 Home page (assembles the sections)
 │   ├── globals.css             Theme tokens, base typography
 │   ├── icon.svg                Favicon
-│   └── projects/[slug]/page.js Case-study page for each project
+│   └── projects/[slug]/page.js Dynamic case-study page for each project
 ├── components/
 │   ├── layout/                 Navbar, Footer, ScrollProgress, ScrollToTop
 │   ├── sections/               Hero, TechMarquee, About, Skills, Projects,
 │   │                           WhyPartner, Experience, Testimonials, CTA
-│   ├── projects/               ProjectDetail (case-study content)
-│   └── ui/                     Logo, Reveal (small reusable pieces)
+│   ├── projects/               ProjectDetail component
+│   └── ui/                     Logo, Reveal (reusable components)
 └── data/                       All site content (one file per topic)
-    ├── index.js                Re-exports everything — import from "@/data"
+    ├── index.js                Central export point
     ├── navigation.js
     ├── about.js
     ├── skills.js
@@ -57,30 +89,90 @@ src/
     ├── why-partner.js
     ├── experience.js
     └── testimonials.js
-public/                         Static assets (e.g. portrait.png)
+public/                         Static assets (images, files)
 ```
 
-The `@/` alias points to `src/`, so imports look like `@/components/ui/Reveal` and `@/data`.
+**Path Aliases:** The `@/` alias points to `src/`, so imports look like `@/components/ui/Reveal` and `@/data`.
 
-## Editing content
+## Editing Content
 
-Text and numbers live in `src/data/`, not in the components:
+All content is stored in `src/data/` for easy updates without touching component code.
 
-- **Projects & case studies** — add or edit an entry in `projects.js`. Each entry needs a unique `slug`; its page is generated automatically at `/projects/<slug>`.
-- **Skills** — edit `skills.js` (categories, skill levels as percentages, tools).
-- **About, experience, testimonials, navigation** — edit the matching file.
+### Projects
 
-Colours are Tailwind utilities (the accent is `red-500` / `red-600` on a black background). Font variables and the heading font are defined in `src/app/layout.js` and `src/app/globals.css`.
+Edit `src/data/projects.js` to add or modify projects. Each project needs a unique `slug` which generates a page at `/projects/<slug>`.
 
-## Things to personalise
+```javascript
+{
+  id: 1,
+  slug: 'my-project',
+  title: 'My Project',
+  description: 'Brief description',
+  // ... more fields
+}
+```
 
-Before publishing, replace these placeholders:
+### Skills
 
-- **Download Resume** button (`src/components/sections/Hero.js`) currently links to `#`. Put your CV in `public/` (for example `public/Abdullah-CV.pdf`) and point the button to `/Abdullah-CV.pdf` with the `download` attribute.
-- **Social links** in `src/components/layout/Footer.js` point to the generic GitHub, LinkedIn and X homepages.
-- **Photos** in About and Experience are stock images from picsum.photos; replace them with your own (place files in `public/`).
-- **Skill percentages, project stats and testimonials** are sample content.
+Edit `src/data/skills.js` to update skill categories and proficiency levels (shown as percentages).
+
+### Other Content
+
+| File                  | Purpose                           |
+| --------------------- | --------------------------------- |
+| `navigation.js`       | Navbar menu items                 |
+| `about.js`            | About section text and bio        |
+| `tech-stack.js`       | Technologies for marquee          |
+| `why-partner.js`      | Value propositions                |
+| `experience.js`       | Work history timeline             |
+| `testimonials.js`     | Client reviews                    |
+
+## Customization
+
+### Colors
+
+The primary accent is `red-500` and `red-600` on a dark background. Edit colors in:
+- `src/app/globals.css` for CSS custom properties
+- Tailwind utility classes in components
+
+### Typography
+
+Fonts are configured in `src/app/layout.js`:
+- **Poppins** for body text
+- **Plus Jakarta Sans** for headings
+- **Geist Mono** for code
+
+### Animations
+
+Framer Motion animations are configured in individual components. Adjust timing and easing as needed.
+
+## Things to Personalize
+
+Before publishing, update these placeholders:
+
+**Download Resume Button**  
+Located in `src/components/sections/Hero.js`. Place your CV in `public/` (e.g., `public/Abdullah-CV.pdf`) and update the link.
+
+**Social Links**  
+Located in `src/components/layout/Footer.js`. Replace the generic links with your actual profiles.
+
+**Images**  
+Replace stock images in About and Experience sections. Place your images in `public/` and update the references.
+
+**Sample Data**  
+Update skill percentages, project stats, and testimonials with your real information.
 
 ## Deployment
 
-The site is fully static and deploys to any Next.js host. The quickest route is [Vercel](https://vercel.com/new): import the repository and deploy. Remote images are allowed for `picsum.photos`, `images.unsplash.com` and `placehold.co` in `next.config.mjs`; add any new image host there.
+This site is fully static and can be deployed to any Next.js host.
+
+**Vercel (Recommended)**  
+1. Import your repository at [vercel.com/new](https://vercel.com/new)
+2. Deploy with default settings
+
+**Image Configuration**  
+Remote images are allowed for `picsum.photos`, `images.unsplash.com`, and `placehold.co` in `next.config.mjs`. Add any additional image hosts there.
+
+## License
+
+This project is open source and available under the MIT License.
