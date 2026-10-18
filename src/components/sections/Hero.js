@@ -71,7 +71,8 @@ export default function Hero() {
               />
             </Link>
             <a
-              href="#"
+              href="/mabdullah-cv.pdf"
+              download="Muhammad-Abdullah-CV.pdf"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10 sm:w-auto"
             >
               Download Resume
